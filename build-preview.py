@@ -17,8 +17,8 @@ import sys
 
 RAIZ = pathlib.Path(__file__).parent
 # a ordem é a das dependências: quem é importado vem primeiro
-MODULOS = ['js/ceu.js', 'js/movimento.js', 'js/i18n.js', 'js/agenda.js', 'js/ouvir.js', 'js/main.js']
-DADOS = ['data/agenda.json', 'data/disco.json', 'data/instagram.json']
+MODULOS = ['js/ceu.js', 'js/movimento.js', 'js/i18n.js', 'js/agenda.js', 'js/conteudo.js', 'js/main.js']
+DADOS = ['data/agenda.json', 'data/canais.json', 'data/disco.json', 'data/imprensa.json']
 
 
 def css_com_fontes() -> str:
@@ -51,6 +51,7 @@ def main() -> int:
     corpo = re.search(r'<body>(.*)</body>', html, re.S).group(1)
     corpo = re.sub(r'<script type="module".*?</script>', '', corpo, flags=re.S)
 
+
     dados = {f'/{c}': json.loads((RAIZ / c).read_text(encoding='utf-8')) for c in DADOS}
 
     saida = f"""{titulo}
@@ -60,6 +61,9 @@ def main() -> int:
 (function(){{
   'use strict';
   document.documentElement.dataset.tema = 'claro';
+  // ficheiro solto, sem servidor: os embeds do Spotify e do YouTube não abrem
+  // aqui, por isso ficam as caixas a dizer o que é que lá vai estar
+  document.documentElement.dataset.semRede = '1';
   // pré-visualização num ficheiro só: os JSON vivem aqui dentro
   var DADOS = {json.dumps(dados, ensure_ascii=False)};
   var origem = window.fetch ? window.fetch.bind(window) : null;
