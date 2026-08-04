@@ -106,8 +106,9 @@ parte quando um serviço externo está em baixo.
 | Booking | `api/booking.js` | `BOOKING_EMAIL`, `RESEND_API_KEY`, `ONOFRIANA_HOOK` | funciona sem nada configurado (regista na consola) |
 | Bandcamp | — | — | não tem API pública; entra por `iframe` oficial quando houver disco |
 
-As tarefas periódicas estão em `vercel.json`: agenda de hora a hora, Instagram
-uma vez por dia.
+As tarefas periódicas estão em `vercel.json`, ambas diárias — no plano Hobby
+da Vercel as *cron jobs* só podem correr uma vez por dia; de hora a hora exige
+Pro e o deploy é recusado. Se passares a Pro, muda a da agenda para `0 * * * *`.
 
 ## Por fazer antes de publicar
 
@@ -118,6 +119,23 @@ uma vez por dia.
 - [ ] Perfil no Songkick reclamado + chave de API
 - [ ] `og.jpg` para partilhas (1200 × 630)
 - [ ] Domínio e ligação cruzada com o onofriana.pt
+
+## Publicar na Vercel
+
+Projeto novo, importado deste repositório:
+
+| Definição | Valor |
+|---|---|
+| Framework Preset | Other |
+| Root Directory | `./` |
+| Build Command | *(vazio — não há passo de compilação)* |
+| Output Directory | `./` |
+| Install Command | *(vazio)* |
+
+Os ficheiros de `api/` viram funções Node automaticamente (o `package.json` já
+tem `"type": "module"`). As variáveis de ambiente da tabela acima entram em
+Settings → Environment Variables; sem elas o site funciona na mesma, servindo
+os instantâneos de `data/`.
 
 ## Acessibilidade e desempenho
 
