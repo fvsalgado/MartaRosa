@@ -1,0 +1,95 @@
+{
+  "nota": "Fonte única dos links da Marta. O site só mostra o que tem verificado:true — assim nunca aponta para a conta de outra pessoa. Confirmar os que estão a false e virar o interruptor.",
+  "canais": [
+    {
+      "chave": "spotify",
+      "nome": "Spotify",
+      "descricao": { "pt": "Perfil de artista", "en": "Artist profile" },
+      "url": "https://open.spotify.com/artist/3GBKzMtAJzSPWInVpUajXR",
+      "embed": "https://open.spotify.com/embed/artist/3GBKzMtAJzSPWInVpUajXR?utm_source=generator",
+      "verificado": true,
+      "fonte": "biografia confere: fado, viola, letrista, Grande Noite do Fado 2004 e O Meu Fado 2019"
+    },
+    {
+      "chave": "youtube",
+      "nome": "YouTube",
+      "descricao": { "pt": "Vídeos e disco completo", "en": "Videos and full album" },
+      "url": "https://www.youtube.com/playlist?list=OLAK5uy_lI-xDoFidDm-SD0nHAe7NYLw3i43mBb1U",
+      "verificado": true,
+      "fonte": "playlist oficial do disco Discos do Povo Vol. 16"
+    },
+    {
+      "chave": "deezer",
+      "nome": "Deezer",
+      "descricao": { "pt": "Catálogo", "en": "Catalogue" },
+      "url": "https://www.deezer.com/album/170200562",
+      "verificado": true,
+      "fonte": "single O Músico, 2020"
+    },
+    {
+      "chave": "tidal",
+      "nome": "TIDAL",
+      "descricao": { "pt": "Catálogo", "en": "Catalogue" },
+      "url": "https://tidal.com/artist/5840953",
+      "verificado": true,
+      "fonte": "perfil de artista"
+    },
+    {
+      "chave": "discogs",
+      "nome": "Discogs",
+      "descricao": { "pt": "Disco de 2014, em CD", "en": "2014 album, on CD" },
+      "url": "https://www.discogs.com/release/15318129-Marta-Rosa-Marta-Rosa",
+      "verificado": true,
+      "fonte": "edição em CD, Portugal, 2014"
+    },
+
+    {
+      "chave": "instagram",
+      "nome": "Instagram",
+      "descricao": { "pt": "Dia a dia", "en": "Day to day" },
+      "url": null,
+      "verificado": false,
+      "fonte": "NÃO ENCONTRADO em pesquisa aberta — é preciso o endereço dela"
+    },
+    {
+      "chave": "soundcloud",
+      "nome": "SoundCloud",
+      "descricao": { "pt": "Gravações soltas", "en": "Loose recordings" },
+      "url": "https://soundcloud.com/idmartarosa",
+      "verificado": false,
+      "fonte": "aparece em resultados de pesquisa mas não foi possível abrir a página para confirmar que é ela"
+    },
+    {
+      "chave": "appleMusic",
+      "nome": "Apple Music",
+      "descricao": { "pt": "Catálogo", "en": "Catalogue" },
+      "url": "https://music.apple.com/gb/artist/marta-rosa/900930171",
+      "verificado": false,
+      "fonte": "há uma Marta Rosa com este id mas o catálogo não bate certo (tem um tema latino de 2025) — confirmar antes de ligar"
+    },
+    {
+      "chave": "songkick",
+      "nome": "Songkick",
+      "descricao": { "pt": "Seguir as datas", "en": "Follow the dates" },
+      "url": null,
+      "verificado": false,
+      "fonte": "sem perfil encontrado — é preciso reclamar o perfil e pedir chave de API"
+    },
+    {
+      "chave": "bandsintown",
+      "nome": "Bandsintown",
+      "descricao": { "pt": "Seguir as datas", "en": "Follow the dates" },
+      "url": null,
+      "verificado": false,
+      "fonte": "sem perfil encontrado"
+    },
+    {
+      "chave": "bandcamp",
+      "nome": "Bandcamp",
+      "descricao": { "pt": "Comprar direto", "en": "Buy direct" },
+      "url": null,
+      "verificado": false,
+      "fonte": "sem página encontrada — é o sítio onde a venda direta rende mais, vale a pena criar"
+    }
+  ]
+}
